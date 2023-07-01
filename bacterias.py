@@ -4,7 +4,7 @@ from fastapi import FastAPI
 app = FastAPI()
 
 @app.get("/bacterias/")
-def read_item(p: Union[int, None] = None,e: Union[int, None] = None,t: Union[int, None] = None,d: Union[int, None] = None,bacterias: Union[int, None] = None):
+def read_item(p: Union[int, None] = None,e: Union[int, None] = None,t: Union[int, None] = None,d: Union[int, None] = None,bacterias: Union[str, None] = None):
     try:
         bacterias = [abs(int(char)) for char in bacterias.split(',')]
         periodo_maduracion = abs(int(p))
